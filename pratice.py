@@ -66,13 +66,57 @@
 # time = input('time:')
 # greet(name,time)
 
-def area(radius):
-  return 3.142 * radius * radius
+# def area(radius):
+#   return 3.142 * radius * radius
 
-def vol(area,len):
-  print(area * len)
+# def vol(area,len):
+#   print(area * len)
 
-radius = int(input('radius:'))
-length = int(input('length:'))
+# radius = int(input('radius:'))
+# length = int(input('length:'))
 
-vol(area(radius),length)
+# vol(area(radius),length)
+
+#----------------------------------------------------------------------------------------------------------------
+#VARIABLE SCOPE
+# my_name = 'LEE'
+
+# def print_name():
+#   global my_name
+#   my_name = 'KIM'
+#   print('The name is',my_name)
+
+# print_name()
+# print('The name outside of function is', my_name)
+#----------------------------------------------------------------------------------------------------------------
+
+#DICTIONARIES
+# belt = {'1':'red','2':'pink','3':'white','4':'yellow'}
+# print(belt)
+# print(belt['1'])
+# print(belt['2'])
+# print('6' in belt)
+# print('3' in belt)
+# print(belt.keys())
+# print(belt.values())
+# belt['5'] = 'green'
+# print(belt)
+def loop(dic):
+  for key,value in dic.items():
+    print(f'I am{key} and I am a {value} belt')
+
+belts = {}
+
+while True:
+  name = input('enter name:')
+  color = input('enter color:')
+  belts[name] = color
+
+  check = input('Countinue? (y/n)')
+  if check == 'y':
+    continue
+  else:
+    break
+
+loop(belts)
+#----------------------------------------------------------------------------------------------------------------
