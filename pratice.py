@@ -123,31 +123,25 @@
 
 # loop(belts)
 #----------------------------------------------------------------------------------------------------------------
+#LIST COMPREHNETION
+prizes = [5,10,50,100,1000]
+dbPrizes = []
+for prize in prizes:
+  dbPrizes.append(prize*2)
+print(dbPrizes)
 
-#CLASS
-class Planet:
-  shape = 'round'
+dbPrizes = [prize*2 for prize in prizes]
+print(dbPrizes)
 
-  def __init__(self,name,radius,gravity,system):
-    self.name = name
-    self.radius = radius
-    self.gravity = gravity
-    self.system = system
-  def orbit(self):
-    return f'{self.name} is orbiting in the {self.system}'
-  @classmethod
-  def commons(cls):
-    return f'All planets are {cls.shape}'
-  @staticmethod
-  def spin(speed='2000 mile per hour'):
-    return f'The speed and spins at {speed}'
+nums = [1,2,3,4,5,6,7,8,9,10]
 
-hoth = Planet('LEE',20000,5.6,'HOHOHO')
-print(f'Name is:{hoth.name}')
-print(f'Radius is:{hoth.radius}')
-print(f'Gravity is:{hoth.gravity}')
-print(hoth.orbit())
-print(Planet.commons())
-print(Planet.spin('1000 miles'))
+evennum = []
+for num in nums:
+  if num % 2 == 0:
+    evennum.append(num)
+print(evennum)
+
+evennum = [num for num in nums if num % 2 == 0]
+print(evennum)
 #----------------------------------------------------------------------------------------------------------------
 
