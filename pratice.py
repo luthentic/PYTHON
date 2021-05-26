@@ -124,24 +124,68 @@
 # loop(belts)
 #----------------------------------------------------------------------------------------------------------------
 #LIST COMPREHNETION
-prizes = [5,10,50,100,1000]
-dbPrizes = []
-for prize in prizes:
-  dbPrizes.append(prize*2)
-print(dbPrizes)
+# prizes = [5,10,50,100,1000]
+# dbPrizes = []
+# for prize in prizes:
+#   dbPrizes.append(prize*2)
+# print(dbPrizes)
 
-dbPrizes = [prize*2 for prize in prizes]
-print(dbPrizes)
+# dbPrizes = [prize*2 for prize in prizes]
+# print(dbPrizes)
 
-nums = [1,2,3,4,5,6,7,8,9,10]
+# nums = [1,2,3,4,5,6,7,8,9,10]
 
-evennum = []
-for num in nums:
-  if num % 2 == 0:
-    evennum.append(num)
-print(evennum)
+# evennum = []
+# for num in nums:
+#   if num % 2 == 0:
+#     evennum.append(num)
+# print(evennum)
 
-evennum = [num for num in nums if num % 2 == 0]
-print(evennum)
+# evennum = [num for num in nums if num % 2 == 0]
+# print(evennum)
 #----------------------------------------------------------------------------------------------------------------
+#MAP
+# from random import shuffle
 
+# def jumble(word):
+#   anagram = list(word)
+#   shuffle(anagram)
+#   return ''.join(anagram)
+
+# words = ['APPLE','ORAGNE','GRAPE']
+# anagram = []
+
+# # for word in words:
+# #   anagram.append(jumble(word))
+# # print(anagram)
+
+# # print(list(map(jumble,words)))
+
+# print([jumble(word) for word in words])
+#----------------------------------------------------------------------------------------------------------------
+#FILTER
+# grades = ['A','B','F','C','F','B','F']
+
+# def rmf(grade):
+#   return grade != 'F'
+
+# print(list(filter(rmf,grades)))
+
+# print([grade for grade in grades if grade != 'F'])
+#----------------------------------------------------------------------------------------------------------------
+#LABDA
+# nums = [1,2,3,4,5,6]
+# print(list(map(lambda a:a*a,nums)))
+#----------------------------------------------------------------------------------------------------------------
+def couch_dis(fuc):
+  def wrapper():
+    print('aaacoughaaa')
+    fuc()
+    print('bbbcouchbbb')
+  return wrapper
+
+@couch_dis
+def question():
+  print('can you give me a discount on that?')
+
+question()
