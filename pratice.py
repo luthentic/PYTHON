@@ -177,15 +177,46 @@
 # nums = [1,2,3,4,5,6]
 # print(list(map(lambda a:a*a,nums)))
 #----------------------------------------------------------------------------------------------------------------
-def couch_dis(fuc):
-  def wrapper():
-    print('aaacoughaaa')
-    fuc()
-    print('bbbcouchbbb')
-  return wrapper
+#DECORATION
+# def couch_dis(fuc):
+#   def wrapper():
+#     print('aaacoughaaa')
+#     fuc()
+#     print('bbbcouchbbb')
+#   return wrapper
 
-@couch_dis
-def question():
-  print('can you give me a discount on that?')
+# @couch_dis
+# def question():
+#   print('can you give me a discount on that?')
 
-question()
+# question()
+#----------------------------------------------------------------------------------------------------------------
+# file = open('text.txt')
+
+# for line in file:
+#   print(line.rstrip())
+
+# file.seek(50)
+
+# lines = file.readlines(100)
+# print(lines)
+#----------------------------------------------------------------------------------------------------------------
+#FILE WRITE
+# quote = [
+#   '\nI can do it whatever I want',
+#   '\nWe are all the same'
+# ]
+# with open('text.txt','w') as writeLee:
+#   writeLee.write('Hey LEE')
+#   writeLee.write('\nWhat do you want?')
+# with open('text.txt','a') as writeLee:
+#   writeLee.writelines(quote)
+#----------------------------------------------------------------------------------------------------------------
+#DOWNLOAD IMAGE
+import urllib.request
+
+def image(url,file_path,file_name):
+  full_path = file_path + file_name +'.jpg'
+
+url = input('ENTER IMG URL:')
+file_name = input('ENTER FILE NAME:')
